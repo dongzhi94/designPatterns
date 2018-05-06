@@ -1,4 +1,4 @@
-package com.ying.liu.observeDesign;
+package com.dong.zhi.observeDesign;
 
 /**
  * 布告板接口

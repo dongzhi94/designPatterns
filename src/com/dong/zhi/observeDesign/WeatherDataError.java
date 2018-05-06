@@ -1,4 +1,4 @@
-package com.ying.liu.observeDesign;
+package com.dong.zhi.observeDesign;
 
 public class WeatherDataError {
     //错误示范

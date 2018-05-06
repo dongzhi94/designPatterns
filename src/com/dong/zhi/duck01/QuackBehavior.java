@@ -1,4 +1,4 @@
-package com.ying.liu.duck01;
+package com.dong.zhi.duck01;
 
 public interface QuackBehavior {
 

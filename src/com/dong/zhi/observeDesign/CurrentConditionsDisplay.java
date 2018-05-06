@@ -1,4 +1,4 @@
-package com.ying.liu.observeDesign;
+package com.dong.zhi.observeDesign;
 
 /**
  * 目前状况布告板

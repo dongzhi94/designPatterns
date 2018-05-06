@@ -1,4 +1,4 @@
-package com.ying.liu.observeDesign.useJdk;
+package com.dong.zhi.observeDesign.useJdk;
 
 import java.util.Observable;
 

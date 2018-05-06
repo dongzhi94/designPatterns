@@ -1,6 +1,6 @@
-package com.ying.liu.observeDesign.useJdk;
+package com.dong.zhi.observeDesign.useJdk;
 
-import com.ying.liu.observeDesign.DisplayElement;
+import com.dong.zhi.observeDesign.DisplayElement;
 
 import java.util.Observable;
 import java.util.Observer;
