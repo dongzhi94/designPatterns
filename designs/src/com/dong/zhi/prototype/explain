@@ -1,0 +1,23 @@
+设计模式之原型模式：
+Specify the kind of objects to create using a prototypical instance, and create new objects by copying this prototype. （使用原型实例指定将要创建的对象类型，通过复制这个实例创建新的对象。）
+在面向对象系统中，使用原型模式来复制一个对象自身，从而克隆出多个与原型对象一模一样的对象。
+
+所有的Java类都继承自java.lang.Object，而Object类提供一个clone()方法，可以将一个Java对象复制一份。因此在Java中可以直接使用Object提供的clone()方法来实现对象的克隆，Java语言中的原型模式实现很简单。
+能够实现克隆的Java类必须实现一个标识接口Cloneable，表示这个Java类支持复制。如果一个类没有实现这个接口但是调用了clone()方法，Java编译器将抛出一个CloneNotSupportedException异常。
+注意： java.lang.Cloneable 只是起到告诉程序可以调用clone方法的作用，它本身并没有定义任何方法。
+在使用原型模式克隆对象时，根据其成员对象是否也克隆，原型模式可以分为两种形式：深克隆 和 浅克隆 。
+
+public class Person implements Cloneable{
+
+    private String name;
+
+    private int age;
+
+    private List<String> list;
+}
+①直接将源对象中的name的引用值拷贝给新对象的name字段； 如果更改新对象的name字段值，源对象的该字段也同时被更改了
+②根据原Person对象中的name指向的字符串对象创建一个新的相同的字符串对象，将这个新字符串对象的引用赋给新拷贝的Person对象的name字段。 这两种拷贝方式分别叫做 浅拷贝 和 深拷贝 。
+
+如果想要深拷贝一个对象， 这个对象必须要实现Cloneable接口，实现clone方法，并且在clone方法内部，把该对象引用的其他对象也要clone一份 ， 这就要求这个被引用的对象必须也要实现Cloneable接口并且实现clone方法。
+深拷贝要自己实现clone方法。
+BeanUtils中的copyProperties方法是通过反射进行的深拷贝

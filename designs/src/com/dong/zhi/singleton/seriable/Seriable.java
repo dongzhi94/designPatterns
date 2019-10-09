@@ -3,7 +3,7 @@ package com.dong.zhi.singleton.seriable;
 import java.io.Serializable;
 
 /**
- * 序列化与反序列化保证单例
+ * 序列化与反序列化破坏单例
  */
 public class Seriable implements Serializable {
 
