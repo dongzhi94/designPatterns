@@ -20,7 +20,7 @@ public class Seriable implements Serializable {
     }
 
     /**
-     * 在jdk中ObjectInputStream的类中有readUnshared（）方法。简单描述一下，那就是如果被反序列化的对象的类存在readResolve这个方法，他会调用这个方法来返回一个“array”（我也不明白），然后浅拷贝一份，作为返回值，并且无视掉反序列化的值，即使那个字节码已经被解析。
+     * 在jdk中ObjectInputStream的类中有readUnshared（）方法。简单描述一下，那就是如果被反序列化的对象的类存在readResolve这个方法，他会调用这个方法来返回一个obj，然后浅拷贝一份，作为返回值，并且无视掉反序列化的值，即使那个字节码已经被解析。
      * 结果就是，需要序列化和反序列化的类中加入private Object readResolve（）方法后，反序列化后的对象与序列化的对象是一致的，即保证了单例。
      * @return
      */
